@@ -12,8 +12,8 @@ jobs:
     steps:
       - node/install
       - checkout
+      - eb/setup
       - aws-cli/setup
-      -eb/setup
       - run:
           name: Front-End Install
           command: |
