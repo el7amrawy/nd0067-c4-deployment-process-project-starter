@@ -33,19 +33,3 @@ jobs:
           name: Deploy App
           command: |
             npm run frontend:deploy
-
-workflows:
-  udagram:
-    jobs:
-      - build
-      - hold:
-          filters:
-            branches:
-              only:
-                - master
-          type: approval
-          requires:
-            - build
-      - deploy:
-          requires:
-            - hold
