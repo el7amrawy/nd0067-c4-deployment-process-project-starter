@@ -7,7 +7,6 @@ orbs:
   # different jobs are calles later in the workflows sections
 jobs:
   build:
-      build:
     docker:
       - image: "cimg/base:stable"
     steps:
@@ -34,7 +33,7 @@ jobs:
           name: Deploy App
           command: |
             npm run frontend:deploy
-            
+
 workflows:
   udagram:
     jobs:
