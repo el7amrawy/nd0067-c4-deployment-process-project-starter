@@ -16,7 +16,7 @@ export const sequelize = new Sequelize({
   username: "postgres",
   password: "postgres",
   database: "postgres",
-  host: "database-2.cnsch3nefuvk.us-east-1.rds.amazonaws.com",
+  host: "database-3.cnsch3nefuvk.us-east-1.rds.amazonaws.com",
   port: 5432,
   dialect: "postgres",
 });
