@@ -46,19 +46,17 @@ jobs:
       - eb/setup
       - aws-cli/setup
       - checkout
-      # - run:
-      #     name: Deploy Front-End
-      #     # TODO: Install, build, deploy in both apps
-      #     command: |
-      #       npm run frontend:deploy
+      - run:
+          name: Deploy Front-End
+          # TODO: Install, build, deploy in both apps
+          command: |
+            npm run frontend:deploy
       - run:
           name: set env for deployment
-          # TODO: Install, build, deploy in both apps
           command: |
             npm run set-env
       - run:
           name: Setup the secrets in CircleCi and send them to EB
-          # TODO: Install, build, deploy in both apps
           command: |
             cd udagram/udagram-api && eb setenv POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=postgres POSTGRES_HOST=database-1.cnsch3nefuvk.us-east-1.rds.amazonaws.com POSTGRES_DB=postgres AWS_BUCKET=arn:aws:s3:::front-nabsbjkba JWT_SECRET=mysecretstring
       - run:
