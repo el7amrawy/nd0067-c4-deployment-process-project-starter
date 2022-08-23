@@ -1,25 +1,12 @@
 import * as dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
-import { Sequelize } from "sequelize-typescript";
-
-//
-// import pg from "pg";
-//
+import { sequelize } from "./sequelize";
 
 import { IndexRouter } from "./controllers/v0/index.router";
 
 import bodyParser from "body-parser";
 import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
-
-export const sequelize = new Sequelize({
-  username: "postgres",
-  password: "postgres",
-  database: "postgres",
-  host: "database-3.cnsch3nefuvk.us-east-1.rds.amazonaws.com",
-  port: 5432,
-  dialect: "postgres",
-});
 
 (async () => {
   dotenv.config();
