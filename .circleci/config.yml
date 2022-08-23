@@ -58,7 +58,7 @@ jobs:
       - run:
           name: Setup the secrets in CircleCi and send them to EB
           command: |
-            cd udagram/udagram-api && eb setenv POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=postgres POSTGRES_HOST=database-1.cnsch3nefuvk.us-east-1.rds.amazonaws.com POSTGRES_DB=postgres AWS_BUCKET=arn:aws:s3:::front-nabsbjkba JWT_SECRET=mysecretstring
+            cd udagram/udagram-api && eb setenv POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=postgres POSTGRES_HOST=database-1.cnsch3nefuvk.us-east-1.rds.amazonaws.com POSTGRES_DB=postgres AWS_BUCKET=arn:aws:s3:::front-nabsbjkba JWT_SECRET=mysecretstring && env
       - run:
           name: Deploy Back-End
           # TODO: Install, build, deploy in both apps
