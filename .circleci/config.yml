@@ -51,8 +51,11 @@ jobs:
       #     # TODO: Install, build, deploy in both apps
       #     command: |
       #       npm run frontend:deploy
-      - run: eb list
-      - run: eb use N-env
+      - run:
+          name: set env for deployment
+          # TODO: Install, build, deploy in both apps
+          command: |
+            npm run set-env
       - run:
           name: passing secrets to Circlci
           # TODO: Install, build, deploy in both apps
