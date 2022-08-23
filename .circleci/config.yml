@@ -34,3 +34,12 @@ jobs:
           name: Deploy Frontend
           command: |
             npm run frontend:deploy
+workflows:
+  udagram:
+    jobs:
+      - build
+      - hold:
+          filters:
+            branches:
+              only:
+                - master
