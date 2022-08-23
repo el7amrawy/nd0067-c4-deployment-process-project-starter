@@ -46,11 +46,13 @@ jobs:
       - eb/setup
       - aws-cli/setup
       - checkout
-      - run:
-          name: Deploy Front-End
-          # TODO: Install, build, deploy in both apps
-          command: |
-            npm run frontend:deploy
+      # - run:
+      #     name: Deploy Front-End
+      #     # TODO: Install, build, deploy in both apps
+      #     command: |
+      #       npm run frontend:deploy
+      - run: eb list
+      - run: eb use N-env
       - run:
           name: passing secrets to Circlci
           # TODO: Install, build, deploy in both apps
