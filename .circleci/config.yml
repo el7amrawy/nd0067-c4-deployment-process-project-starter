@@ -31,10 +31,7 @@ jobs:
           command: |
             npm run api:build
 # 
-#  deploy:
-    docker:
-      - image: "cimg/base:stable"
-      # more setup needed for aws, node, elastic beanstalk
+ deploy:
     steps:
       - node/install:
           node-version: '14.15' 
