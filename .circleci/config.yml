@@ -60,7 +60,7 @@ jobs:
           name: passing secrets to Circlci
           # TODO: Install, build, deploy in both apps
           command: |
-            eb setenv POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=postgres POSTGRES_HOST=database-1.cnsch3nefuvk.us-east-1.rds.amazonaws.com POSTGRES_DB=postgres AWS_BUCKET=arn:aws:s3:::front-nabsbjkba JWT_SECRET=mysecretstring
+            cd udagram/udagram-api && eb setenv POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=postgres POSTGRES_HOST=database-1.cnsch3nefuvk.us-east-1.rds.amazonaws.com POSTGRES_DB=postgres AWS_BUCKET=arn:aws:s3:::front-nabsbjkba JWT_SECRET=mysecretstring
       - run:
           name: Deploy Back-End
           # TODO: Install, build, deploy in both apps
