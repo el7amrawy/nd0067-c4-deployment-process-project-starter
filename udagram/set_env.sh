@@ -8,4 +8,4 @@ export AWS_BUCKET=arn:aws:s3:::front-nabsbjkba
 export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=mysecretstring
-export URL=http://localhost:8100
+export URL=http://front-nabsbjkba.s3-website-us-east-1.amazonaws.com/
