@@ -7,7 +7,7 @@
   2.  Back-End installation
   3.  Front-End building
   4.  Back-End building
-  ### 2. Build
+  ### 2. Deploy
   1. Front-End deployment
   2. Setting env for deployment
   3. Setup the secrets in CircleCi and send them to EB
