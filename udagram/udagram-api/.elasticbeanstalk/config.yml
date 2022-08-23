@@ -1,14 +1,14 @@
 branch-defaults:
   default:
-    environment: m-env
+    environment: q-env
 environment-defaults:
-  m-env:
+  q-env:
     branch: null
     repository: null
 global:
-  application_name: m
+  application_name: q
   default_ec2_keyname: null
-  default_platform: Node.js 16 running on 64bit Amazon Linux 2
+  default_platform: Node.js 14 running on 64bit Amazon Linux 2
   default_region: us-east-1
   include_git_submodules: true
   instance_profile: null
