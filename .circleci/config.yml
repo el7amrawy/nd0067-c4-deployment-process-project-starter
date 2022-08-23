@@ -35,8 +35,8 @@ jobs:
       #     command: |
       #       npm run frontend:deploy
   deploy:
-    docker:
-      - image: "cimg/base:stable"
+    # docker:
+    #   - image: "cimg/base:stable"
     steps:
       - node/install
       - checkout
